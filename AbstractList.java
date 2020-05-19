@@ -6,15 +6,11 @@ public abstract class AbstractList<E> implements List<E> {
    public abstract Iterator<E> iterator();   
    
    public boolean isEmpty() {
-      if (size() == 0) 
-         return true;
-      return false;
+      return size() == 0;
    }
 
    public boolean contains(E value) {
-       if (indexOf(value) != -1) 
-         return true;
-       return false;
+       return indexOf(value) != -1;
    }
 
    public String toString() {
