@@ -1,3 +1,11 @@
+/*
+ * Group: Project Team #5
+ * Course: CS211 (C) Spring 2020
+ * Date: May 19, 2020
+ * Assignment: Ch16 Programming Project #3
+ *  
+ */
+
 // Class ArrayList<E> can be used to store a list of values of type E.
 
 import java.util.*;
@@ -34,13 +42,6 @@ public class ArrayList<E> extends AbstractList<E> {
     public E get(int index) {
         checkIndex(index);
         return elementData[index];
-    }
-
-    // post: appends the given value to the end of the list
-    public void add(E value) {
-        ensureCapacity(size + 1);
-        elementData[size] = value;
-        size++;
     }
 
     // pre : 0 <= index <= size() (throws IndexOutOfBoundsException if not)
@@ -84,13 +85,6 @@ public class ArrayList<E> extends AbstractList<E> {
         size = 0;
     }
 
-    // post: appends all values in the given list to the end of this list
-    public void addAll(List<E> other) {
-        for (E value: other) {
-            add(value);
-        }
-    }
-
     // post: returns an iterator for this list
     public Iterator<E> iterator() {
         return new ArrayListIterator();
@@ -105,14 +99,6 @@ public class ArrayList<E> extends AbstractList<E> {
                 newCapacity = capacity;
             }
             elementData = Arrays.copyOf(elementData, newCapacity);
-        }
-    }
-
-    // post: throws an IndexOutOfBoundsException if the given index is
-    //       not a legal index of the current list
-    private void checkIndex(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("index: " + index);
         }
     }
 

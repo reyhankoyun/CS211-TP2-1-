@@ -1,3 +1,11 @@
+/*
+ * Group: Project Team #5
+ * Course: CS211 (C) Spring 2020
+ * Date: May 19, 2020
+ * Assignment: Ch16 Programming Project #3
+ *  
+ */
+
 // Class LinkedList<E> can be used to store a list of values of type E.
 
 import java.util.*;
@@ -27,11 +35,6 @@ public class LinkedList<E> extends AbstractList<E> {
         return current.data;
     }
 
-    // post: appends the given value to the end of the list
-    public void add(E value) {
-        add(size, value);
-    }
-
     // pre: 0 <= index <= size() (throws IndexOutOfBoundsException if not)
     // post: inserts the given value at the given index, shifting subsequent
     //       values right
@@ -44,13 +47,6 @@ public class LinkedList<E> extends AbstractList<E> {
         current.next = newNode;
         newNode.next.prev = newNode;
         size++;
-    }
-
-    // post: appends all values in the given list to the end of this list
-    public void addAll(List<E> other) {
-        for (E value: other) {
-            add(value);
-        }
     }
 
     // pre : 0 <= index < size() (throws IndexOutOfBoundsException if not)
@@ -101,14 +97,6 @@ public class LinkedList<E> extends AbstractList<E> {
             }
         }
         return current;
-    }
-
-    // post: throws an IndexOutOfBoundsException if the given index is
-    //       not a legal index of the current list
-    private void checkIndex(int index) {
-        if (index < 0 || index >= size()) {
-            throw new IndexOutOfBoundsException("index: " + index);
-        }
     }
 
     private static class ListNode<E> {

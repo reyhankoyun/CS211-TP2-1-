@@ -1,3 +1,11 @@
+/*
+ * Group: Project Team #5
+ * Course: CS211 (C) Spring 2020
+ * Date: May 19, 2020
+ * Assignment: Ch16 Programming Project #3
+ *  
+ */
+
 // Generic interface for a List of E objects.
 
 public interface List<E> extends Iterable<E> {
