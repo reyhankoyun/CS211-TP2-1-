@@ -14,12 +14,12 @@
 
 public class ListClient3 {
     public static void main(String[] args) {
-        ArrayList<Integer> list1 = new ArrayList<Integer>();
-        processList(list1);
+        AbstractList<Integer> arrayList = new ArrayList<Integer>();
+        processList(arrayList);
         System.out.println();
 
-        LinkedList<Integer> list2 = new LinkedList<Integer>();
-        processList(list2);
+        AsbtractList<Integer> linkedList = new LinkedList<Integer>();
+        processList(linkedList);
     }
 
     public static void processList(List list, List other) {
