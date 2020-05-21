@@ -3,7 +3,8 @@
  * Course: CS211 (C) Spring 2020
  * Date: May 19, 2020
  * Assignment: Ch16 Programming Project #3
- *  
+ *
+ *
  */
 
 //This is an abstract class which contains the common methods and behaviors of Lists and is inherited
